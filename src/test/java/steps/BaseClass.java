@@ -32,7 +32,7 @@ public class BaseClass {
 
 		String browser = prop.getProperty("browser");
 		homePageURL = prop.getProperty("url");
-		prop.setProperty("name", "yogendra");
+		//prop.setProperty("name", "yogendra");
 
 		if (browser.equalsIgnoreCase("chrome")) {
 
@@ -49,6 +49,7 @@ public class BaseClass {
 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS );
 		
 		System.out.println("Before scenario global hook executed");
 		}

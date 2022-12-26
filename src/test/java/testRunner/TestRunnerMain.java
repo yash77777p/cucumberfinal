@@ -14,8 +14,8 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = {"pretty","json:target/json-report/cucumber.json", "rerun:failedtestcases/rerun.txt"},
 		//"junit:junit_xml/cucumber.xml"
 		//"html:target/html-report/cucumber.html", 
-		dryRun = false,
-		tags = "@p1",
+		dryRun = true,
+		tags = "@p1 and not @P2",
 		monochrome = true
 		
 		)

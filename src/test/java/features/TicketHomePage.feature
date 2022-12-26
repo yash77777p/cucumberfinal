@@ -45,14 +45,14 @@ Feature: Ticket.com Home Page
   Background: 
     Given I am on home page
 
-  @p1
+  @p1 @sanity
   Scenario: Login with valid credentials
     When I click on the login link
     And I entered the valid 'username' and 'password' and clicked on the login button
       | cvstestuipath@gmail.com | Expert768$* |
     Then I validate the 'usernameshortcut' on home page
       | YP |
-	@p2
+	@p2 @smoke
   Scenario Outline: Login with invalid credentials
     When I click on the login link
     And I entered the invalid "<username>" and "<password>" and clicked on the login button
